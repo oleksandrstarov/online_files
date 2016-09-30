@@ -1,0 +1,11 @@
+{
+  "name": "online",
+  "version": "0.0.1",
+  "description": "Online with usage GIT and gh pages",
+  "main": "online.js",
+  "repository": "",
+  "author": "Oleksandr Starov",
+  "dependencies": {
+    
+  }
+}
