@@ -6,6 +6,6 @@
   "repository": "",
   "author": "Oleksandr Starov",
   "dependencies": {
-    
+    "simple-git": "1.52.0"
   }
 }
