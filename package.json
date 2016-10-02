@@ -6,6 +6,8 @@
   "repository": "",
   "author": "Oleksandr Starov",
   "dependencies": {
-    "simple-git": "1.52.0"
+    "simple-git": "1.52.0",
+    "buffer": "^4.6.0",
+    "iconv-lite": "^0.4.13"
   }
 }
