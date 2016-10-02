@@ -1,18 +1,20 @@
-var fileSystem = require('fs');
+var fileSystem = require('fs'),
+    git = require('simple-git')();
 
 //set own path
 var path = __dirname;
 console.log(path);
 
+//git.addRemote('online3', 'https://github.com/oleksandrstarov/online.git');
+
+
 fileSystem.watch(path, (eventType, filename) => {
   console.log(`event type is: ${eventType}`);
   if (filename && filename === 'index.htm') {
     console.log(`filename provided: ${filename}`);
-    require('simple-git')()
-         .add('./*')
+        git.add(filename)
          .commit("first commit!")
-         .addRemote('live', 'https://github.com/oleksandrstarov/online.git')
-         .push(['-u', 'live', 'gh-pages'], function () {
+         .push(['-u', 'https://github.com/oleksandrstarov/online.git', 'HEAD:gh-pages'], function () {
             console.log('DONE'); 
          });
     
